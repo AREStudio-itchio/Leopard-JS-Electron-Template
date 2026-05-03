@@ -10,7 +10,7 @@
     "dist": "electron-builder"
   },
   "build": {
-    "appId": "com.example.mijuego",
+    "appId": "com.example.mygame",
     "win": { "target": "nsis" },
     "nsis": {
       "oneClick": true,
