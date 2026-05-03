@@ -13,17 +13,13 @@ for dirpath, _, files in os.walk(root):
             with open(path, encoding="utf-8") as fp:
                 txt = fp.read()
 
-            # ruta relativa desde este archivo a /lib/leopard.js
             rel = os.path.relpath(lib, dirpath)
-
-            # formato web
+            
             rel = rel.replace("\\", "/")
 
-            # asegurar ./ cuando no sube directorios
             if not rel.startswith("."):
                 rel = "./" + rel
 
-            # reemplazo SOLO de esa URL concreta
             new_txt = re.sub(pattern, rel, txt)
 
             if new_txt != txt:
