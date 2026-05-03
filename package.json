@@ -1,5 +1,6 @@
 {
   "name": "APPNAME",
+  "productName": "PRODUCTNAME",
   "version": "1.0.0",
   "description": "DESCRIPTION",
   "author": "AUTHOR",
@@ -9,6 +10,7 @@
     "dist": "electron-builder"
   },
   "build": {
+    "appId": "com.example.mijuego",
     "win": { "target": "nsis" },
     "nsis": {
       "oneClick": true,
